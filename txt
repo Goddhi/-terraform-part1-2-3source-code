@@ -7,6 +7,8 @@
 
 80
 
+....
+
 terraform apply -target=aws_vpc.main -auto-approve
 
 terraform apply -target=aws_subnet.public -auto-approve
