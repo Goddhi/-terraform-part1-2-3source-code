@@ -61,10 +61,6 @@ variable "destination_cidr_block" {
 
 ### ----- Autoscaling module ----- ###
 
-variable "ami" {
-  type        = string
-  description = "AMI-ID to use for our launch templates"
-}
 
 variable "ami-web" {
   type        = string
