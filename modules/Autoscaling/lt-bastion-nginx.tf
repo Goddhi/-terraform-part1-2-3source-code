@@ -33,7 +33,7 @@ tags = merge(
     
 }
 
-user_data = filebase64("${path.module}/bastion.sh")
+# user_data = filebase64("${path.module}/bastion.sh")
 }
 
 
@@ -69,5 +69,5 @@ tags = merge(
 )
 }
 
-user_data = filebase64("${path.module}/nginx.sh")
+# user_data = filebase64("${path.module}/nginx.sh")
 }

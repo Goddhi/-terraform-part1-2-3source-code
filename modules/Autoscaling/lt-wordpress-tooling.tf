@@ -6,9 +6,9 @@ image_id               = var.ami-web
 instance_type          = "t2.micro"
 vpc_security_group_ids = var.web-sg
 
-# iam_instance_profile {
-#     name = var.instance_profile
-# }
+iam_instance_profile {
+    name = var.instance_profile
+}
 
 key_name = var.keypair
 
@@ -69,5 +69,5 @@ tags = merge(
 )
 }
 
-user_data = filebase64("${path.module}/tooling.sh")
+# user_data = filebase64("${path.module}/tooling.sh")
 }

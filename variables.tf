@@ -81,6 +81,11 @@ variable "ami-nginx" {
   description = "AMI-ID to use for our launch templates"
 }
 
+variable "ami-sonar" {
+  type        = string
+  description = "AMI-ID to use for our launch templates"
+}
+
 
 
 variable "keypair" {
