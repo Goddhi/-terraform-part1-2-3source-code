@@ -12,8 +12,8 @@ resource "aws_security_group_rule" "inbound-bastion-ssh" {
   from_port                = 22
   to_port                  = 22
   protocol                 = "tcp"
-  source_security_group_id = aws_security_group.ACS["bastion-sg"].id
-  security_group_id        = aws_security_group.ACS["nginx-sg"].id
+  source_security_group_id = aws_security_group.ACS["nginx-sg"].id
+  security_group_id        = aws_security_group.ACS["bastion-sg"].id
 }
 
 
@@ -28,10 +28,10 @@ resource "aws_security_group_rule" "inbound-int-alb-https" {
 
 
 
-resource "aws_security_group_rule" "inbound-web-https" {
+resource "aws_security_group_rule" "inbound-web-http" {
   type                     = "ingress"
-  from_port                = 443
-  to_port                  = 443
+  from_port                = 80
+  to_port                  = 80
   protocol                 = "tcp"
   source_security_group_id = aws_security_group.ACS["int-alb-sg"].id
   security_group_id        = aws_security_group.ACS["webserver-sg"].id
