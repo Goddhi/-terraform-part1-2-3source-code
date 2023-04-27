@@ -26,13 +26,13 @@ environment = "dev"
 
 destination_cidr_block = "0.0.0.0/0"
 
-ami-nginx = "ami-0fab85b8ffd876919"
+ami-nginx = "ami-004c3fbbd76269d17"
 
-ami-web = "ami-049aaf3767f48cb3a"
+ami-web = "ami-0e1df35963a5cebfe"
 
-ami-bastion = "ami-0c455516c88f5a439"
+ami-bastion = "ami-068286e7428ac0394"
 
-ami-sonar = "ami-0324e0c6315bcb119"
+ami-sonar = "ami-039445b0e88cf1cef"
 
 
 keypair = "aws-key-pair"
