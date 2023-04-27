@@ -12,8 +12,8 @@ resource "aws_security_group_rule" "inbound-bastion-ssh" {
   from_port                = 22
   to_port                  = 22
   protocol                 = "tcp"
-  source_security_group_id = aws_security_group.ACS["nginx-sg"].id
-  security_group_id        = aws_security_group.ACS["bastion-sg"].id
+  source_security_group_id = aws_security_group.ACS["bastion-sg"].id
+  security_group_id        = aws_security_group.ACS["nginx-sg"].id
 }
 
 
