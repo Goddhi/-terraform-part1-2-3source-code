@@ -95,23 +95,23 @@ resource "aws_security_group_rule" "inbound-alb-https" {
 
 
 # security group for compute module
-resource "aws_security_group_rule" "inbound-bastion-ssh-compute" {
-  from_port         = 22
-  protocol          = "tcp"
-  to_port           = 22
-  type              = "ingress"
-  source_security_group_id = aws_security_group.ACS["bastion-sg"].id
-  security_group_id = aws_security_group.ACS["compute-sg"].id
-}
+# resource "aws_security_group_rule" "inbound-bastion-ssh-compute" {
+#   from_port         = 22
+#   protocol          = "tcp"
+#   to_port           = 22
+#   type              = "ingress"
+#   source_security_group_id = aws_security_group.ACS["bastion-sg"].id
+#   security_group_id = aws_security_group.ACS["compute-sg"].id
+# }
 
-resource "aws_security_group_rule" "inbound-port-artifcatory" {
-  from_port         = 8081
-  protocol          = "tcp"
-  to_port           = 8081
-  type              = "ingress"
-  cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = aws_security_group.ACS["compute-sg"].id
-}
+# resource "aws_security_group_rule" "inbound-port-artifcatory" {
+#   from_port         = 8081
+#   protocol          = "tcp"
+#   to_port           = 8081
+#   type              = "ingress"
+#   cidr_blocks       = ["0.0.0.0/0"]
+#   security_group_id = aws_security_group.ACS["compute-sg"].id
+# }
 
 resource "aws_security_group_rule" "inbound-port-jenkins" {
   from_port         = 8080
